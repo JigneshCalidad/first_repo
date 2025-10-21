@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <!-- Header -->
+        <header class="calculator-header">
+            <h1>Professional Calculator</h1>
+            <div class="status-indicator" id="statusIndicator">
+                <span class="status-dot"></span>
+                <span class="status-text">Ready</span>
+            </div>
+        </header>
+
+        <!-- Display -->
+        <div class="display-container">
+            <div class="display-expression" id="displayExpression">0</div>
+            <div class="display-result" id="displayResult">0</div>
+        </div>
+
+        <!-- Calculator Grid -->
+        <div class="calculator-grid">
+            <!-- Row 1 -->
+            <button class="calc-btn function-btn" data-action="clear">C</button>
+            <button class="calc-btn function-btn" data-action="backspace">⌫</button>
+            <button class="calc-btn function-btn" data-action="percentage">%</button>
+            <button class="calc-btn operator-btn" data-operator="divide">÷</button>
+
+            <!-- Row 2 -->
+            <button class="calc-btn number-btn" data-number="7">7</button>
+            <button class="calc-btn number-btn" data-number="8">8</button>
+            <button class="calc-btn number-btn" data-number="9">9</button>
+            <button class="calc-btn operator-btn" data-operator="multiply">×</button>
+
+            <!-- Row 3 -->
+            <button class="calc-btn number-btn" data-number="4">4</button>
+            <button class="calc-btn number-btn" data-number="5">5</button>
+            <button class="calc-btn number-btn" data-number="6">6</button>
+            <button class="calc-btn operator-btn" data-operator="subtract">−</button>
+
+            <!-- Row 4 -->
+            <button class="calc-btn number-btn" data-number="1">1</button>
+            <button class="calc-btn number-btn" data-number="2">2</button>
+            <button class="calc-btn number-btn" data-number="3">3</button>
+            <button class="calc-btn operator-btn" data-operator="add">+</button>
+
+            <!-- Row 5 -->
+            <button class="calc-btn number-btn zero-btn" data-number="0">0</button>
+            <button class="calc-btn number-btn" data-number=".">.</button>
+            <button class="calc-btn equals-btn" data-action="equals">=</button>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <h3>History</h3>
+                <button class="clear-history-btn" id="clearHistory">Clear</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <!-- History items will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Success Sound -->
+    <audio id="successSound" preload="auto">
+        <source src="sounds/success.mp3" type="audio/mpeg">
+        <source src="sounds/success.wav" type="audio/wav">
+    </audio>
+
+    <!-- Error Sound -->
+    <audio id="errorSound" preload="auto">
+        <source src="sounds/error.mp3" type="audio/mpeg">
+        <source src="sounds/error.wav" type="audio/wav">
+    </audio>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Calculating...</div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

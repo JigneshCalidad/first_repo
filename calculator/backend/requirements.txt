@@ -1,0 +1,19 @@
+# Calculator API Dependencies
+# ===========================
+# This file lists all the Python packages required to run the calculator API
+
+# Flask - Web framework for creating REST APIs
+Flask==3.0.0
+
+# Requests - For making HTTP requests in test scripts
+requests==2.31.0
+
+# Optional: For production deployment
+# gunicorn==21.2.0
+
+# Optional: For testing
+# pytest==7.4.3
+# pytest-flask==1.3.0
+
+# Optional: For API documentation
+# flask-restx==1.3.0
