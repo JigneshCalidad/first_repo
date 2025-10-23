@@ -24,7 +24,7 @@ print("Welcome to your coding journey!")
 
 # Let's create some variables
 name = "Python Learner"  # This is a string (text)
-age = 25                # This is an integer (whole number)
+age = 27                # This is an integer (whole number)
 height = 5.9           # This is a float (decimal number)
 is_learning = True      # This is a boolean (True or False)
 
@@ -41,7 +41,7 @@ print(f"name = {name}")
 print(f"Name = {Name}")
 
 # You can reassign variables
-age = 26  # Changed from 25 to 26
+age = 28  # Changed from 27 to 28
 print(f"Next year I'll be {age}")
 
 # Multiple assignment in one line
